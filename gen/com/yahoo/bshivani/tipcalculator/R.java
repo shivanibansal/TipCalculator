@@ -18,8 +18,12 @@ public final class R {
         public static final int btn15Perct=0x7f060000;
         public static final int btn20Perct=0x7f060003;
         public static final int etAmount=0x7f060001;
-        public static final int tvTipAmount=0x7f060005;
-        public static final int tvTipIsLabel=0x7f060004;
+        public static final int etSplitNum=0x7f060007;
+        public static final int tvAmoutPerPerson=0x7f060008;
+        public static final int tvSplitLabel=0x7f060006;
+        public static final int tvSplitPerPersonLabel=0x7f060009;
+        public static final int tvTipAmount=0x7f060004;
+        public static final int tvTipIsLabel=0x7f060005;
     }
     public static final class layout {
         public static final int activity_tip_calculator=0x7f030000;
@@ -32,6 +36,8 @@ public final class R {
         public static final int err_please_enter_amount=0x7f040007;
         public static final int fifteen_perct_str=0x7f040004;
         public static final int hello_world=0x7f040001;
+        public static final int lbl_split=0x7f04000a;
+        public static final int split_per_person_lbl=0x7f04000b;
         public static final int ten_perct_str=0x7f040002;
         public static final int tip_is_str=0x7f040006;
         public static final int twenty_perct_str=0x7f040003;

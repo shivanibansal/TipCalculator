@@ -7,10 +7,12 @@
     <string name="twenty_perct_str">20%</string>
     <string name="fifteen_perct_str">15%</string>
     <string name="enter_amount_str">&quot;Enter any amount &quot;</string>
-    <string name="tip_is_str">Tip is:</string>
+    <string name="tip_is_str">Tip is :</string>
     <string name="err_please_enter_amount">Please enter numeric (>0) amount</string>
 	<string name="err_invalid_input">Invalid Input. Enter numeric (>0) input</string>
 	<string name="err_enter_greater_than_zero">Enter numeric (>0) input</string>
+	<string name="lbl_split">"Split between :"</string>
+	<string name="split_per_person_lbl">Split per person :</string>
 	
     
 </resources>
