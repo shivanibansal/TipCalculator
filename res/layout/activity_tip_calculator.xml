@@ -47,16 +47,6 @@
         android:text="@string/twenty_perct_str" />
 
     <TextView
-        android:id="@+id/tvTipIsLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btn15Perct"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="42dp"
-        android:text="@string/tip_is_str"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
         android:id="@+id/tvTipAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,5 +54,54 @@
         android:layout_alignBottom="@+id/tvTipIsLabel"
         android:layout_toRightOf="@+id/btn15Perct"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTipIsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/tvSplitLabel"
+        android:layout_marginBottom="37dp"
+        android:text="@string/tip_is_str"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/etSplitNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvSplitLabel"
+        android:layout_toRightOf="@+id/btn15Perct"
+        android:ems="10"
+        android:text="1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvAmoutPerPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etSplitNum"
+        android:layout_alignTop="@+id/tvSplitPerPersonLabel"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvSplitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvSplitPerPersonLabel"
+        android:layout_below="@+id/btn15Perct"
+        android:layout_marginTop="16dp"
+        android:text="@string/lbl_split"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/tvSplitPerPersonLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btn15Perct"
+        android:layout_below="@+id/tvSplitLabel"
+        android:layout_marginRight="14dp"
+        android:text="@string/split_per_person_lbl"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </RelativeLayout>
