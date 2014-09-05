@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/btn15Perct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="OnClick15Perct"
+        android:text="@string/fifteen_perct_str" />
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="@string/enter_amount_str" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btn10Perct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/btn15Perct"
+        android:onClick="OnClick10Perct"
+        android:text="@string/ten_perct_str" />
+
+    <Button
+        android:id="@+id/btn20Perct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/btn15Perct"
+        android:onClick="OnClick20Perct"
+        android:text="@string/twenty_perct_str" />
+
+    <TextView
+        android:id="@+id/tvTipIsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn15Perct"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="42dp"
+        android:text="@string/tip_is_str"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTipIsLabel"
+        android:layout_alignBottom="@+id/tvTipIsLabel"
+        android:layout_toRightOf="@+id/btn15Perct"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
