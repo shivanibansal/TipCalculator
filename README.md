@@ -24,4 +24,5 @@
     *   (Optional) User can edit preset tip percentages and have them persist across launches
     *   (Optional) Experiment with trying input widgets to replace the buttons and/or textviews
 
-
+**Walkthrough of app** :<br>
+  ![Video Walkthrough](TipCalculator.gif)
