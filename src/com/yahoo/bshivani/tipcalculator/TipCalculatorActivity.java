@@ -4,32 +4,36 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class TipCalculatorActivity extends Activity {
 	public EditText etAmount;
-	public TextView tvTipIsLabel;
-	public TextView tvTipAmount;
+	public EditText etCustomTip;
 	public EditText etSplitNum; 
 	public TextView tvSplitLabel;
 	public TextView tvSplitPerPersonLabel;
 	public TextView tvAmoutPerPerson;
+	public TextView tvTipIsLabel;
+	public TextView tvTipAmount;
 	
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tip_calculator);
+
         etAmount = (EditText) findViewById(R.id.etAmount);
-        tvTipIsLabel = (TextView) findViewById(R.id.tvTipIsLabel);
-        tvTipAmount = (TextView) findViewById(R.id.tvTipAmount);
+        etCustomTip = (EditText) findViewById(R.id.etCustomTip);
         etSplitNum = (EditText) findViewById(R.id.etSplitNum);
         tvSplitLabel = (TextView) findViewById(R.id.tvSplitLabel);
         tvSplitPerPersonLabel = (TextView) findViewById(R.id.tvSplitPerPersonLabel);
         tvAmoutPerPerson = (TextView) findViewById(R.id.tvAmoutPerPerson);
-        
+        tvTipIsLabel = (TextView) findViewById(R.id.tvTipIsLabel);
+        tvTipAmount = (TextView) findViewById(R.id.tvTipAmount);
+
+        etSplitNum.setText("1");
+        tvAmoutPerPerson.setText("");
         setVisibilityForTipSplitControls (false);
     }
 
@@ -81,7 +85,31 @@ public class TipCalculatorActivity extends Activity {
     	int calculatedTip = calculateTipAmount (etAmount.getText().toString(), 20);
     	setTipAmount (calculatedTip);
     }
-
+    
+    // Click on custom percentage button to calculate custom % tip of input amount  
+    public void OnClickCustomPerct (View v)
+    {
+    	// Validation on Amount String
+    	if (validateData () == false) 
+    	{
+    		setVisibilityForTipSplitControls (false);
+    		return;
+    	}
+    	String etCustomTipStr = etCustomTip.getText().toString();
+    	// Validate Custom Tip
+    	if ((etCustomTipStr.compareTo("") == 0) || (etCustomTipStr.matches("[0]+") == true))
+    	{
+			Toast.makeText(getBaseContext(), R.string.err_please_custom_tip, -1).show();
+			setVisibilityForTipSplitControls (false);
+    		return;
+		}
+	
+    	int iCustomTip = Integer.parseInt(etCustomTip.getText().toString());
+    	// Calculate custom percent Tip and set calculate tip in view
+    	int calculatedTip = calculateTipAmount (etAmount.getText().toString(), iCustomTip);
+    	setTipAmount (calculatedTip);
+    }
+    
 
     // Calculate Tip as per input tip percentage 
     private int calculateTipAmount (String amountStr, int tipPerct)
