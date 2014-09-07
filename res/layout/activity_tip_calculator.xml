@@ -57,7 +57,7 @@
         android:text="@string/twenty_perct_str" />
  
 	<Button
-        android:id="@+id/btnCustomTip"
+        android:id="@+id/btnCustomPerct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
