@@ -33,6 +33,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="10dp"
         android:layout_toLeftOf="@+id/etAmount"
+        android:background="@drawable/ic_btn_unpressed_48"
         android:onClick="OnClick10Perct"
         android:text="@string/ten_perct_str" />
    
@@ -41,30 +42,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-		android:layout_toRightOf="@+id/btn10Perct"
-		android:layout_marginLeft="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/btn10Perct"
+        android:background="@drawable/ic_btn_unpressed_48"
         android:onClick="OnClick15Perct"
         android:text="@string/fifteen_perct_str" />
 
 	<Button
-        android:id="@+id/btn20Perct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@+id/btn15Perct"
-        android:onClick="OnClick20Perct"
-        android:text="@string/twenty_perct_str" />
+	    android:id="@+id/btn20Perct"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_marginLeft="5dp"
+	    android:layout_toRightOf="@+id/btn15Perct"
+	    android:background="@drawable/ic_btn_unpressed_48"
+	    android:onClick="OnClick20Perct"
+	    android:text="@string/twenty_perct_str" />
  
 	<Button
-        android:id="@+id/btnCustomPerct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@+id/btn20Perct"
-        android:onClick="OnClickCustomPerct"
-        android:text="@string/custom_perct_str" />
+	    android:id="@+id/btnCustomPerct"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_marginLeft="5dp"
+	    android:layout_toRightOf="@+id/btn20Perct"
+	    android:background="@drawable/ic_btn_unpressed_48"
+	    android:onClick="OnClickCustomPerct"
+	    android:text="@string/custom_perct_str" />
     
 	<TextView
 	    android:id="@+id/tvCustomTip"

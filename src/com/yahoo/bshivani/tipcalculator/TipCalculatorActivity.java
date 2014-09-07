@@ -271,18 +271,30 @@ public class TipCalculatorActivity extends Activity {
     private void setButtonPressed(int btnType)
     {
     	btn10Perct.setTextColor(Color.parseColor("#000000"));
+    	btn10Perct.setBackgroundResource(R.drawable.ic_btn_unpressed_48);
     	btn15Perct.setTextColor(Color.parseColor("#000000"));
+    	btn15Perct.setBackgroundResource(R.drawable.ic_btn_unpressed_48);
     	btn20Perct.setTextColor(Color.parseColor("#000000"));
+    	btn20Perct.setBackgroundResource(R.drawable.ic_btn_unpressed_48);
     	btnCustomPerct.setTextColor(Color.parseColor("#000000"));
+    	btnCustomPerct.setBackgroundResource(R.drawable.ic_btn_unpressed_48);
     	
-    	if (btnType == BTN_10_PERCT)
+    	if (btnType == BTN_10_PERCT) {
     		btn10Perct.setTextColor(Color.parseColor("#FF0000"));
-    	else if (btnType == BTN_15_PERCT)
+    		btn10Perct.setBackgroundResource(R.drawable.ic_btn_pressed_48);
+    	}
+    	else if (btnType == BTN_15_PERCT) {
     		btn15Perct.setTextColor(Color.parseColor("#FF0000"));
-    	if (btnType == BTN_20_PERCT)
+    		btn15Perct.setBackgroundResource(R.drawable.ic_btn_pressed_48);
+    	}
+    	if (btnType == BTN_20_PERCT) {
     		btn20Perct.setTextColor(Color.parseColor("#FF0000"));
-    	if (btnType == BTN_CUSTOM_PERCT)
+    		btn20Perct.setBackgroundResource(R.drawable.ic_btn_pressed_48);
+    	}
+    	if (btnType == BTN_CUSTOM_PERCT) {
     		btnCustomPerct.setTextColor(Color.parseColor("#FF0000"));
+    		btnCustomPerct.setBackgroundResource(R.drawable.ic_btn_pressed_48);
+    	}
     }
 }
 
